@@ -1,7 +1,7 @@
 clear all
 load('ExperimentData2.mat')
 
-subjectID = input('Enter the participant's ID: ');
+subjectID = input('Enter the participant ID: ');
 
 
 ListenChar(2);

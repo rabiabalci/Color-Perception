@@ -1,7 +1,7 @@
 clear all
 load('ExperimentData2.mat')
 
-subjectID = input('Katýlýmcýnýn ID''sini giriniz:     ');
+subjectID = input('Enter the participant's ID: ');
 
 
 ListenChar(2);
@@ -41,10 +41,10 @@ for trial=1:length(stimulusOrder)
     Screen('DrawTexture',windowPtr,myTexture,[],imageLocation);
     Screen('Flip',windowPtr);
     
-    WaitSecs(20); %burasý için 30saniye düþünmüþtüm ancak kýsaltmam gerekti
+    WaitSecs(20); 
     
-    text = ' Hüzün = 1 \n \n \n Mutluluk = 2 \n \n \n Öfke = 3 \n \n \n Korku = 4 \n \n \n Þaþkýnlýk = 5 \n \n \n Tiksinti = 6 \n \n\n Tarafsýz = 7';
-    text2 = 'Bu resim sizde hangi duyguyu uyandýrýyor?';
+    text = ' Sadness = 1 \n \n \n Happiness = 2 \n \n \n Anger = 3 \n \n \n Fear = 4 \n \n \n Surprise = 5 \n \n \n Disgust = 6 \n \n\n Neutral = 7';
+    text2 = 'Which emotion is arising when you look at this picture?';
     
     while 1
         Screen('TextSize', windowPtr, 30);
@@ -106,7 +106,7 @@ for trial=1:length(stimulusOrder)
         WaitSecs(15 / numFlashes);
     end
     
-    flashText = ' Toplam kaç yuvarlak gösterildi?';
+    flashText = ' How many circles were presented in total?';
     Screen('TextSize', windowPtr, 30);
     DrawFormattedText(windowPtr, flashText, xCenter / 2 + 100, yCenter / 2);
     Screen('Flip',windowPtr);
@@ -139,7 +139,7 @@ for trial=1:length(stimulusOrder)
     WaitSecs(3);
 end
 
-quitText = 'Deneye katýldýðýnýz için teþekkürler...';
+quitText = 'Thank you for your participation...';
 
 while 1
     DrawFormattedText(windowPtr, quitText, xCenter / 2, yCenter / 2);
